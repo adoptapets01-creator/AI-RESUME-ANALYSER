@@ -1,0 +1,389 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1f2937;
+  color: #f3f4f6;
+}
+
+
+.container {
+  width: 100%;
+}
+
+
+/* Hero */
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+
+.hero h1 {
+  color: white;
+  font-size: 50px;
+}
+
+
+.hero p {
+  color: #d1d5db;
+  font-size: 20px;
+}
+
+
+
+/* Upload */
+
+.upload-box {
+  margin: 40px auto;
+  padding: 30px;
+  background: #374151;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.25);
+}
+
+
+input {
+  margin-bottom:20px;
+  color:white;
+}
+
+
+button {
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:14px 30px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
+  transition:.3s;
+}
+
+
+button:hover {
+  transform:scale(1.05);
+}
+
+
+
+/* Features */
+
+.features {
+  text-align:center;
+  padding:50px 20px;
+}
+
+
+.cards {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+}
+
+
+.feature-card {
+
+  background:#374151;
+  padding:25px;
+  width:200px;
+  border-radius:15px;
+
+  transition:.3s;
+  box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+
+.feature-card:hover {
+
+  transform:translateY(-10px);
+
+  background:#4b5563;
+}
+
+
+
+/* Result */
+
+.result {
+
+  background:#374151;
+  width:70%;
+  margin:40px auto;
+  padding:40px;
+  border-radius:15px;
+
+}
+
+
+.result h2 {
+  text-align:center;
+}
+
+
+.score-card {
+
+  text-align:center;
+  background:#4b5563;
+  padding:20px;
+  border-radius:15px;
+}
+
+
+.score-card h1 {
+
+  font-size:60px;
+  color:#60a5fa;
+
+}
+
+
+.result-card {
+
+  background:#4b5563;
+  padding:20px;
+  border-radius:12px;
+  margin:15px 0;
+
+}
+
+
+.result button {
+
+  display:block;
+  margin:30px auto 0;
+
+}
+
+
+
+@media(max-width:768px){
+
+.cards{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.result{
+
+width:85%;
+
+}
+
+}
+
+.toast {
+
+  position: fixed;
+  top: 30px;
+  right: 30px;
+
+  padding: 15px 25px;
+
+  border-radius: 12px;
+
+  color: white;
+
+  font-size: 16px;
+
+  z-index: 999;
+
+  animation: slideIn .3s ease;
+
+}
+
+
+.toast.error {
+
+  background: #dc2626;
+
+}
+
+
+.toast.success {
+
+  background: #16a34a;
+
+}
+
+
+
+@keyframes slideIn {
+
+from {
+
+  transform: translateX(100px);
+  opacity: 0;
+
+}
+
+to {
+
+  transform: translateX(0);
+  opacity: 1;
+
+}
+
+}
+
+.loading-box {
+
+  margin-top:30px;
+
+  font-size:20px;
+
+  color:#60a5fa;
+
+  font-weight:bold;
+
+}
+
+
+.dots {
+
+  display:inline-block;
+
+  animation: blink 1.5s infinite;
+
+}
+
+
+
+@keyframes blink {
+
+0% {
+  opacity:0.2;
+}
+
+50% {
+  opacity:1;
+}
+
+100% {
+  opacity:0.2;
+}
+
+}
+
+.recommendation-list {
+  margin-top: 15px;
+  padding-left: 25px;
+  color: #f3f4f6;
+  line-height: 1.8;
+}
+
+.recommendation-list li {
+  margin-bottom: 8px;
+}
+
+.ats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+
+.ats-grid p {
+  background: #4b5563;
+  padding: 12px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+
+.ats-grid span {
+  font-size: 18px;
+}
+
+
+@media(max-width:768px){
+
+  .ats-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+.strength-list {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+
+.strength-list li {
+  margin-bottom: 10px;
+  color: #d1fae5;
+  font-size: 16px;
+}
+
+.weakness-list {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+
+.weakness-list li {
+  margin-bottom: 10px;
+  color: #fde68a;
+  font-size: 16px;
+}
+
+.score-circle {
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 20px auto;
+
+  background:
+conic-gradient(
+  var(--color) var(--score),
+  #4b5563 var(--score)
+);
+
+  position: relative;
+
+}
+
+
+.score-circle::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 115px;
+  height: 115px;
+
+  background: #374151;
+
+  border-radius: 50%;
+
+}
+
+
+.score-circle span {
+
+  position: relative;
+
+  z-index: 1;
+
+  font-size: 35px;
+
+  font-weight: bold;
+
+  color: white;
+
+}
