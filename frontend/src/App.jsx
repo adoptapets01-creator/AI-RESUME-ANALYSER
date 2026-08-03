@@ -94,7 +94,7 @@ function App() {
 
 
       const response = await fetch(
-        "http://localhost:5000/upload",
+        "https://ai-resume-analyser-backend-4lu7.onrender.com/upload",
         {
           method: "POST",
           body: formData
