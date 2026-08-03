@@ -16,7 +16,8 @@ app.use(express.json());
 
 const upload = multer({ dest: "uploads/" });    
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
+
 
    function analyzeResume(text, role) {
     const resumeText = text.toLowerCase();
